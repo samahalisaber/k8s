@@ -67,7 +67,7 @@ deploy Jenkins and create a pipeline that deploy a simple html page to be displa
 Congratulations on reaching the final level!
 
 ```
-kubectl apply -f jenkins.yaml -n level5
+kubectl create -f jenkins.yaml -n level5
 ```
 to get the initial password for jenkins run the following to get it from inside the pod:
 ```
