@@ -5,8 +5,14 @@ metadata:
   labels:
     kubernetes.io/ingress.class: level5
 spec:
-  defaultBackend:
-    service:
-      name: dummy-service
-      port:
-        number: 80
+  rules:
+  - host: next.test.local
+    http:
+      paths:
+      - backend:
+          service:
+            name: dummy
+            port:
+              number: 80
+        path: /
+        pathType: Exact
