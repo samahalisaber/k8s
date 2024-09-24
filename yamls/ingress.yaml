@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: next-level
+  labels:
+    kubernetes.io/ingress.class: level5
+spec:
+  defaultBackend:
+    service:
+      name: dummy-service
+      port:
+        number: 80

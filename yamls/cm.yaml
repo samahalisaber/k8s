@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  unlock: "level2"
+kind: ConfigMap
+metadata:
+  name: next-level
+  namespace: level1

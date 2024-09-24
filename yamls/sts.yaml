@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: database
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: database
+  template:
+    metadata:
+      labels:
+        app: database
+    spec:
+      containers:
+      - name: database
+        image: mysql:latest
+        env:
+        - name: MYSQL_ALLOW_EMPTY_PASSWORD
+          value: "true"
+        volumeMounts:
+        - name: database
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: database
+        persistentVolumeClaim:
+          claimName: database-pvc
