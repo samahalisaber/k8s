@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Deploy to Kubernetes') {
             steps {
-                sh 'kubectl apply -f ./pipeline/htmls.yaml'
+                sh 'kubectl apply -f ./pipeline/htmls.yaml -n level5'
             }
         }
     }
