@@ -1,6 +1,6 @@
 Task Documentation
 ==========
-"Welcome to Level 1!
+Welcome to Level 1!
 
 Task: Create a simple Pod running nginx in this namespace.
 
